@@ -1,10 +1,10 @@
 resource "aws_db_instance" "default" {
   allocated_storage    = 10
-  db_name              = "${{ secrets.DBNAME }}"
+  db_name              = "root"
   engine               = "postgres"
   instance_class       = "db.t3.micro"
-  username             = "${{ secrets.DBNAME }}"
-  password             = "${{ secrets.DBPASSWORD }}"
+  username             = "postgres"
+  password             = "rootroot"
   skip_final_snapshot  = true
   publicly_accessible  = true
   db_subnet_group_name = module.vpc.database_subnet_group_name
